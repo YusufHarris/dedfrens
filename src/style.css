@@ -13,6 +13,7 @@ body
 {
     /* overflow: hidden; */
     cursor: url('icons/deadfrenz.png'), auto;
+    overflow-x:hidden;  
 }
 
 .webgl
@@ -30,6 +31,8 @@ body
     font-size: 3em;
     color:gray;
     filter:blur(5px);
+    text-decoration: none;
+    cursor:help;
 }
 
 .navi:hover
@@ -48,6 +51,7 @@ body
     top:60vh;
     color:gray;
     font-size: 4em;
+
 }
 
 .fire{
@@ -74,3 +78,33 @@ body
     height: 100px;
     color:black;
 }
+
+.section
+{
+    height:100vh;
+    width: 100vw;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #5a5a5a;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+    filter:blur(5px)
+  }

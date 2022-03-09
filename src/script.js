@@ -43,7 +43,6 @@ gltfLoader.load(
         fbx.scale.set(0.01,0.01,0.01)
         mixer = fbx 
         mixer.position.set(-4.5, 0, 0)
-        console.log(mixer)
         scene.add(mixer)
     }
 )
@@ -78,9 +77,22 @@ const sizes = {
  {
     cursor.x = event.clientX / sizes.width - 0.5
     cursor.y = event.clientY / sizes.height - 0.5
-
  
  })
+
+/**
+ * Scroll
+ */
+ let scrollY = window.scrollY
+ let scrollX = window.scrollX
+window.addEventListener('scroll', () => {
+    scrollY = window.scrollY
+    scrollX = window.scrollX
+})
+
+
+
+
 window.addEventListener('resize', () =>
 {
     // Update sizes
@@ -101,9 +113,13 @@ window.addEventListener('resize', () =>
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-camera.position.set(0, 8, 15)
+const offsety = 15
+const offsetx = 8
+camera.position.set(0, offsetx, offsety)
 camera.lookAt(new THREE.Vector3)
 scene.add(camera)
+
+
 
 /**
  * Renderer
@@ -135,14 +151,13 @@ const tick = () =>
     const deltaTime = elapsedTime - previousTime
     previousTime = elapsedTime
 
-    const followY = - cursor.y
-    const followX = cursor.x
-
     // Model animation
     if(mixer){
         mixer.position.y = Math.cos(elapsedTime -.5)
         mixer.rotation.y = Math.PI * 3.5
         mixer.rotation.y = Math.PI * 3.5
+
+        mixer.position.x = scrollY/sizes.height * Math.sin(elapsedTime) + -4.5
     }
 
     // Render
