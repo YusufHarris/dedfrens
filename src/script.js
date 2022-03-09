@@ -160,6 +160,7 @@ const tick = () =>
         mixer.position.x = scrollY/sizes.height * Math.sin(elapsedTime) + -4.5
     }
 
+    camera.rotation.y = scrollY/sizes.height
     // Render
     renderer.render(scene, camera)
 

@@ -13,6 +13,7 @@ body
 {
     /* overflow: hidden; */
     cursor: url(assets/images/b1dda32005a6a922.png), auto;
+    overflow-x:hidden;  
 }
 
 .webgl
@@ -30,6 +31,8 @@ body
     font-size: 3em;
     color:gray;
     filter:blur(5px);
+    text-decoration: none;
+    cursor:help;
 }
 
 .navi:hover
@@ -48,6 +51,7 @@ body
     top:60vh;
     color:gray;
     font-size: 4em;
+
 }
 
 .fire{
@@ -65,5 +69,44 @@ body
     0 0 80px #c3e7eb,
     0 0 160px rgb(26, 17, 17);
 }
+
+.headphones
+{
+    z-index: 10000;
+    /* background-color: red; */
+    width: 100px;
+    height: 100px;
+    color:black;
+}
+
+.section
+{
+    height:100vh;
+    width: 100vw;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #5a5a5a;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+    filter:blur(5px)
+  }
 
 /*# sourceMappingURL=main.css.map*/
