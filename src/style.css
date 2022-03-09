@@ -1,0 +1,76 @@
+@font-face {
+    font-family: "HMT";
+    src: url("./font/HMT.ttf");
+}
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    /* overflow: hidden; */
+    cursor: url('icons/deadfrenz.png'), auto;
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    z-index:0;
+}
+
+.navi{
+    font-family:HMT;
+    z-index:1;
+    font-size: 3em;
+    color:gray;
+    filter:blur(5px);
+}
+
+.navi:hover
+{
+    font-family:HMT;
+    z-index:1;
+    font-size: 3em;
+    color:white;
+    filter:blur(1px);
+    transition: 2s;
+}
+
+.centerpiece{
+    font-family:HMT;
+    position: relative;
+    top:60vh;
+    color:gray;
+    font-size: 4em;
+}
+
+.fire{
+    width: 100%;
+    text-align: center;
+
+    font-weight: 50;
+
+    filter: url(#fire);
+
+    -webkit-box-reflect:below -100% linear-gradient(transparent, #0001);
+
+    text-shadow: 0 0 10px #9de8f5,
+    0 0 40px #7eddfa62,
+    0 0 80px #c3e7eb,
+    0 0 160px rgb(26, 17, 17);
+}
+
+.headphones
+{
+    z-index: 10000;
+    /* background-color: red; */
+    width: 100px;
+    height: 100px;
+    color:black;
+}
